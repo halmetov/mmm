@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMM Burger Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1d1d2e;
+      color: #fff;
+    }
+
+    header {
+      background: #2b2b3d;
+      padding: 1rem;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+    .category {
+      padding: 0.5rem 1rem;
+      background: #2e2e42;
+      color: #fff;
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .category:hover {
+      background: #3a3a54;
+    }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      padding-bottom: 1.6rem;
+      padding-top: 1.6rem;
+      background: #2b2b3d;
+      color: #fff;
+    }
+
+    .menu-card img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+    }
+
+    .menu-card h3 {
+      margin: 0.8rem 0 0.4rem;
+      font-size: 1.2rem;
+    }
+
+    .menu-card p {
+      color: #ccc;
+      margin: 0 0 0.5rem;
+    }
+
+    .menu-card .price {
+      color: #ffca28;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #2b2b3d;
+      padding: 1rem;
+      text-align: center;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="foto/mmm.png" alt="Logo" />
+    <h1>MMM Burger Menu</h1>
+  </header>
+
+  <div class="categories">
+    <div class="category" data-filter="all">Все</div>
+    <div class="category" data-filter="pizza">Пицца</div>
+    <div class="category" data-filter="chicken">Чикен</div>
+    <div class="category" data-filter="lavash">Лаваш</div>
+    <div class="category" data-filter="burger">Бургер</div>
+  </div>
+
+  <div class="menu-container">
+    <div class="menu-card" data-category="pizza">
+      <img src="foto/marg.png" alt="Pizza">
+      <h3>Маргарита Пицца</h3>
+      <p>Тонкое тесто, сыр, помидор</p>
+      <div class="price">1700 ₸</div>
+    </div>
+    <div class="menu-card" data-category="pizza">
+      <img src="foto/syr.png">
+      <h3>Сырный Пицца</h3>
+      <p>Тонкое тесто, сыр</p>
+      <div class="price">1900 ₸</div>
+    </div>
+    <div class="menu-card" data-category="pizza">
+      <img src="foto/pep.png">
+      <h3>Пеперони Пицца</h3>
+      <p>Тонкое тесто, сыр, колбаса</p>
+      <div class="price">2000 ₸</div>
+    </div>
+    <div class="menu-card" data-category="pizza">
+      <img src="foto/gri.png">
+      <h3>Грибной Пицца</h3>
+      <p>Тонкое тесто, сыр, грибы</p>
+      <div class="price">2100 ₸</div>
+    </div>
+    <div class="menu-card" data-category="pizza">
+      <img src="foto/kur.png">
+      <h3>Куриный Пицца</h3>
+      <p>Тонкое тесто, сыр, мясо курицы</p>
+      <div class="price">2000 ₸</div>
+    </div>
+    <div class="menu-card" data-category="chicken">
+      <img src="foto/chasor.png">
+      <h3>Чикен ассорт</h3>
+      <p>Чикен ассорт</p>
+      <div class="price">2200 ₸</div>
+    </div>
+    <div class="menu-card" data-category="chicken">
+      <img src="foto/bezk.png">
+      <h3>Чикен без костей</h3>
+      <p>Чикен без костей</p>
+      <div class="price">3000 ₸</div>
+    </div>
+    <div class="menu-card" data-category="chicken">
+      <img src="foto/noj.png">
+      <h3>Чикен ножки</h3>
+      <p>Чикен ножки</p>
+      <div class="price">2600 ₸</div>
+    </div>
+    <div class="menu-card" data-category="chicken">
+      <img src="foto/kri.png">
+      <h3>Чикен Крылышки</h3>
+      <p>Чикен крылышки</p>
+      <div class="price">2700 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/lavg.jpg">
+      <h3>Лаваш говяжий</h3>
+      <p>Лаваш с Говядиной</p>
+      <div class="price">1200 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/lavgs.jpg">
+      <h3>Лаваш говяжий с сыром</h3>
+      <p>Лаваш говяжий с сыром</p>
+      <div class="price">1350 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/tand.jpg">
+      <h3>Тандир лаваш говяжий</h3>
+      <p>Тандир лаваш говяжий</p>
+      <div class="price">1400 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/lavash.jpg">
+      <h3>Биг лаваш говяжий</h3>
+      <p>Биг лаваш говяжий</p>
+      <div class="price">1500 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/lavasor2.jpg">
+      <h3>Ассорти лаваш</h3>
+      <p>Овощной микс говяжий, куриный</p>
+      <div class="price">1050 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/lavkurs.jpg">
+      <h3>Лаваш куриный</h3>
+      <p>Нежное отварное куриное мясо</p>
+      <div class="price">900 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/lavkur.jpeg">
+      <h3>Лаваш куринный с сыром</h3>
+      <p>Лаваш куринный с сыром</p>
+      <div class="price">1000 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/tanlavk.jpg">
+      <h3>Тандир лаваш куриный</h3>
+      <p>Тандир лаваш куриный</p>
+      <div class="price">1050 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/biglavk.webp">
+      <h3>Биг Лаваш куриный</h3>
+      <p>Биг Лаваш куриный</p>
+      <div class="price">1300 ₸</div>
+    </div>
+    <div class="menu-card" data-category="lavash">
+      <img src="foto/minlavk.jpg">
+      <h3>Мини Лаваш куриный</h3>
+      <p>Мини Лаваш куриный</p>
+      <div class="price">700 ₸</div>
+    </div>
+    <div class="menu-card" data-category="burger">
+      <img src="foto/gam.jpg">
+      <h3>Гамбургер</h3>
+      <p>Гамбургер</p>
+      <div class="price">1000 ₸</div>
+    </div>
+    <div class="menu-card" data-category="burger">
+      <img src="foto/chiz.jpg">
+      <h3>Чизбургер </h3>
+      <p>Чизбургер</p>
+      <div class="price">1100 ₸</div>
+    </div>
+    <div class="menu-card" data-category="burger">
+      <img src="foto/bigbur.png">
+      <h3>Биг бургер</h3>
+      <p>Биг бургер</p>
+      <div class="price">1350 ₸</div>
+    </div>
+    <div class="menu-card" data-category="burger">
+      <img src="foto/bigchiz.png">
+      <h3>Биг Чизбургер</h3>
+      <p>Биг Чизбургер</p>
+      <div class="price">1550 ₸</div>
+    </div>
+    <div class="menu-card" data-category="burger">
+      <img src="foto/chikbur.png">
+      <h3>Чикен бургер</h3>
+      <p>Чикен бургер</p>
+      <div class="price">850 ₸</div>
+    </div>
+  </div>
+
+  <footer>
+    Свяжитесь с нами: +7 (747) 834-7972 <br />
+    +7 (778) 306-3952
+  </footer>
+
+  <script>
+    const categories = document.querySelectorAll('.category');
+    const cards = document.querySelectorAll('.menu-card');
+
+    categories.forEach(category => {
+      category.addEventListener('click', () => {
+        const filter = category.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (filter === 'all' || cardCategory === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
